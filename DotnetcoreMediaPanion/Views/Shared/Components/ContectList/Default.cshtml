@@ -1,0 +1,266 @@
+﻿@model IEnumerable<DotnetcoreMediaPanion.ViewModels1.Contect>
+@{
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center">
+            <h2>Contact us</h2>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!-- Start contact icon column -->
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="contact-icon text-center">
+            <div class="single-icon">
+                <i class="fa fa-mobile"></i>
+                <p>
+                    Call: +1 5589 55488 55<br>
+                    <span>Monday-Friday (9am-5pm)</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Start contact icon column -->
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="contact-icon text-center">
+            <div class="single-icon">
+                <i class="fa fa-envelope-o"></i>
+                <p>
+                    Email: info@example.com<br>
+                    <span>Web: www.example.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Start contact icon column -->
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="contact-icon text-center">
+            <div class="single-icon">
+                <i class="fa fa-map-marker"></i>
+                <p>
+                    Location: A108 Adam Street<br>
+                    <span>NY 535022, USA</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!-- Start Google Map -->
+    <div class="col-md-6 col-sm-12 col-xs-12">
+        <!-- Start Map -->
+        <!-- Uncomment below if you wan to use dynamic maps -->
+        <!--<div id="google-map" data-latitude="40.713732" data-longitude="-74.0092704"></div>-->
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x350&maptype=roadmap&markers=color:red%7Clabel:S%7C40.702147,-74.015794&key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY" alt="">
+        <!-- End Map -->
+    </div>
+    <!-- End Google Map -->
+    <!-- Start  contact -->
+        
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="form contact-form">
+                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div id="errormessage"></div>
+                    <form action="" method="post" role="form" class="contactForm">
+
+                        <div class="row">
+                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Your First Name" data-rule="firstname" data-msg="Please enter first name" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Your Last Name" data-rule="lastname" data-msg="Please enter a valid last name" />
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                <input type="text" name="email" class="form-control" id="email" placeholder="Your Email Address" data-rule="emailaddress" data-msg="Please enter at least 4 chars of email" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Your phone number" data-rule="phonenumber" data-msg="Please enter your valid phone number" />
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                <input type="text" name="jobtitle" class="form-control" id="jobtitle" placeholder="Enter Your Job Title" data-rule="jobtitle" data-msg="Please enter your job Details" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                <input type="text" class="form-control" name="companyname" id="companyname" placeholder="EnterYour Companey name" data-rule="companeyName" data-msg="Please enter your company name" />
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group combox ">
+
+
+
+                                <div class="cont_select_center">
+
+                                    <!-- Custom select structure -->
+                                    <div class="select_mate col-md-12 col-sm-6 col-xs-6" data-mate-select="active">
+                                        <select name="" onchange="" onclick="return false;" id="">
+                                            <option value="">Select One Option </option>
+                                            <option value="1">Select option 1</option>
+                                            <option value="2">Select option 2</option>
+                                            <option value="3">Select option 3</option>
+                                        </select>
+                                        <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)" class="icon_select_mate">
+                                            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                                                <path d="M0-.75h24v24H0z" fill="none" />
+                                            </svg>
+                                        </span>
+                                        <div class="cont_list_select_mate">
+                                            <ul class="cont_select_int">  </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Custom select structure -->
+
+
+                                </div> <!-- End div center   -->
+
+
+                            </div>
+                        </div>
+                        <div class="text-center btnContectSubmite"><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+            </div>
+          
+            
+            <!-- End Left contact -->
+    </div>
+
+
+
+
+
+<script>
+    window.onload = function () {
+        crear_select();
+    }
+
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    };
+
+
+    var li = new Array();
+    function crear_select() {
+        var div_cont_select = document.querySelectorAll("[data-mate-select='active']");
+        var select_ = '';
+        for (var e = 0; e < div_cont_select.length; e++) {
+            div_cont_select[e].setAttribute('data-indx-select', e);
+            div_cont_select[e].setAttribute('data-selec-open', 'false');
+            var ul_cont = document.querySelectorAll("[data-indx-select='" + e + "'] > .cont_list_select_mate > ul");
+            select_ = document.querySelectorAll("[data-indx-select='" + e + "'] >select")[0];
+            if (isMobileDevice()) {
+                select_.addEventListener('change', function () {
+                    _select_option(select_.selectedIndex, e);
+                });
+            }
+            var select_optiones = select_.options;
+            document.querySelectorAll("[data-indx-select='" + e + "']  > .selecionado_opcion ")[0].setAttribute('data-n-select', e);
+            document.querySelectorAll("[data-indx-select='" + e + "']  > .icon_select_mate ")[0].setAttribute('data-n-select', e);
+            for (var i = 0; i < select_optiones.length; i++) {
+                li[i] = document.createElement('li');
+                if (select_optiones[i].selected == true || select_.value == select_optiones[i].innerHTML) {
+                    li[i].className = 'active';
+                    document.querySelector("[data-indx-select='" + e + "']  > .selecionado_opcion ").innerHTML = select_optiones[i].innerHTML;
+                };
+                li[i].setAttribute('data-index', i);
+                li[i].setAttribute('data-selec-index', e);
+                // funcion click al selecionar 
+                li[i].addEventListener('click', function () { _select_option(this.getAttribute('data-index'), this.getAttribute('data-selec-index')); });
+
+                li[i].innerHTML = select_optiones[i].innerHTML;
+                ul_cont[0].appendChild(li[i]);
+
+            }; // Fin For select_optiones
+        }; // fin for divs_cont_select
+    } // Fin Function 
+
+
+
+    var cont_slc = 0;
+    function open_select(idx) {
+        var idx1 = idx.getAttribute('data-n-select');
+        var ul_cont_li = document.querySelectorAll("[data-indx-select='" + idx1 + "'] .cont_select_int > li");
+        var hg = 0;
+        var slect_open = document.querySelectorAll("[data-indx-select='" + idx1 + "']")[0].getAttribute('data-selec-open');
+        var slect_element_open = document.querySelectorAll("[data-indx-select='" + idx1 + "'] select")[0];
+        if (isMobileDevice()) {
+            if (window.document.createEvent) { // All
+                var evt = window.document.createEvent("MouseEvents");
+                evt.initMouseEvent("mousedown", false, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                slect_element_open.dispatchEvent(evt);
+            } else if (slect_element_open.fireEvent) { // IE
+                slect_element_open.fireEvent("onmousedown");
+            } else {
+                slect_element_open.click();
+            }
+        } else {
+
+
+            for (var i = 0; i < ul_cont_li.length; i++) {
+                hg += ul_cont_li[i].offsetHeight;
+            };
+            if (slect_open == 'false') {
+                document.querySelectorAll("[data-indx-select='" + idx1 + "']")[0].setAttribute('data-selec-open', 'true');
+                document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .cont_list_select_mate > ul")[0].style.height = hg + "px";
+                document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .icon_select_mate")[0].style.transform = 'rotate(180deg)';
+            } else {
+                document.querySelectorAll("[data-indx-select='" + idx1 + "']")[0].setAttribute('data-selec-open', 'false');
+                document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .icon_select_mate")[0].style.transform = 'rotate(0deg)';
+                document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .cont_list_select_mate > ul")[0].style.height = "0px";
+            }
+        }
+
+    } // fin function open_select
+
+    function salir_select(indx) {
+        var select_ = document.querySelectorAll("[data-indx-select='" + indx + "'] > select")[0];
+        document.querySelectorAll("[data-indx-select='" + indx + "'] > .cont_list_select_mate > ul")[0].style.height = "0px";
+        document.querySelector("[data-indx-select='" + indx + "'] > .icon_select_mate").style.transform = 'rotate(0deg)';
+        document.querySelectorAll("[data-indx-select='" + indx + "']")[0].setAttribute('data-selec-open', 'false');
+    }
+
+
+    function _select_option(indx, selc) {
+        if (isMobileDevice()) {
+            selc = selc - 1;
+        }
+        var select_ = document.querySelectorAll("[data-indx-select='" + selc + "'] > select")[0];
+
+        var li_s = document.querySelectorAll("[data-indx-select='" + selc + "'] .cont_select_int > li");
+        var p_act = document.querySelectorAll("[data-indx-select='" + selc + "'] > .selecionado_opcion")[0].innerHTML = li_s[indx].innerHTML;
+        var select_optiones = document.querySelectorAll("[data-indx-select='" + selc + "'] > select > option");
+        for (var i = 0; i < li_s.length; i++) {
+            if (li_s[i].className == 'active') {
+                li_s[i].className = '';
+            };
+            li_s[indx].className = 'active';
+
+        };
+        select_optiones[indx].selected = true;
+        select_.selectedIndex = indx;
+        select_.onchange();
+        salir_select(selc);
+    }
+
+</script>
