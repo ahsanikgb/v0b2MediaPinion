@@ -26,10 +26,19 @@
                                 <i class="fa @item.Icon"></i>
                             </a>
                             <h4>@item.Name</h4>
-                            <p>
-                                @item.Description
-                            </p>
 
+                            <div class="Service-description" id="MyText">
+
+                                @*string[] times = (Model.HoursOfOperation).Replace(" ", "").Split('-');*@
+
+                                @{ 
+                                    string[] myval = item.Description.Split('-');
+                                    foreach (string val in myval) {
+                                        <h6 >@val</h6>
+                                    }
+                                }
+                            </div>
+                            <a class="fa-expand Myexpand" href="#MyText">Click to expand All Text</a>
 
 
                         </div>
@@ -40,3 +49,15 @@
         }
     </div>
 </div>
+<script>
+
+    $('.Service-description').click(function () {
+        $(this).toggleClass('full-description');
+        
+    });
+
+    $('.Myexpand').click(function () {
+        $('.Service-description').toggleClass('full-description');
+
+    });
+</script>

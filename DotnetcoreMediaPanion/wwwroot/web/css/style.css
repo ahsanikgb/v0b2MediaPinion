@@ -2527,3 +2527,18 @@ margin-top:70px;
     height: 520px !important;
 }
 
+.Service-description {
+    height: 7.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 0.2;
+    text-align: inherit;
+    /*text-shadow: 12px 21px 1px #363636;*/
+}
+.full-description {
+    height: auto;
+    line-height: 0.2;
+    text-align: inherit;
+
+
+}
