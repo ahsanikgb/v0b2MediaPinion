@@ -8,13 +8,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MediaPanionCore.ViewComponents
 {
-    public class AboutListViewComponent : ViewComponent
+    public class TestListViewComponent : ViewComponent
     {
       
         private readonly MyFirstDBContext db;
-        public AboutListViewComponent(MyFirstDBContext context)
+        public TestListViewComponent(MyFirstDBContext context)
         {
-            db = context;
+            
         }
 
         public async Task<IViewComponentResult> InvokeAsync()
@@ -23,10 +23,10 @@ namespace MediaPanionCore.ViewComponents
             return View(items);
         }
 
-        private async Task<IEnumerable<About>> GetItemsAsync()
+        private async Task<IEnumerable<TestTable>> GetItemsAsync()
         {
 
-            var Details = from d in db.About select d;
+            var Details = from d in db.TestTable select d;
             return Details;
         }
     }

@@ -20,8 +20,16 @@ namespace DotnetcoreMediaPanion.ViewModels1
         public virtual DbSet<Portfolio> Portfolio { get; set; }
         public virtual DbSet<Services> Services { get; set; }
         public virtual DbSet<Slider> Slider { get; set; }
+        public virtual DbSet<TestTable> TestTable { get; set; }
 
-
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Server=tcp:ahsanikgb.database.windows.net,1433;Database=MyFirstDB;Persist Security Info=True;User ID=ahsanikgb;Password=12Arid2791;Encrypt=True");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -171,6 +179,24 @@ namespace DotnetcoreMediaPanion.ViewModels1
 
                 entity.Property(e => e.Title)
                     .HasMaxLength(70)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<TestTable>(entity =>
+            {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.Property(e => e.Address)
+                    .HasMaxLength(70)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Phone)
+                    .HasColumnName("phone")
+                    .HasMaxLength(20)
                     .IsUnicode(false);
             });
         }

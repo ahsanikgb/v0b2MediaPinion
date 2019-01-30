@@ -1,0 +1,60 @@
+﻿@model IEnumerable<DotnetcoreMediaPanion.ViewModels1.TestTable>
+@{
+    Layout = null;
+}
+
+<div id="about" class="about-area area-padding">
+
+    @foreach (var items in Model)
+    {
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-headline text-center">
+                        <h2>@items.Id</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- single-well start-->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="well-left">
+                        <div class="single-well ">
+                            <a href="#">
+                                <img class="aboutimg" src="~/web/img/about/1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- single-well start-->
+                    <!-- single-well end-->
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="well-middle">
+                            <div class="single-well">
+                                <a href="#">
+                                    <h4 class="sec-head">Who We Are</h4>
+                                </a>
+                                <p>
+                                    @items.Name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-check"></i> @items.Address
+                                    </li>
+           
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col-->
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+
+
